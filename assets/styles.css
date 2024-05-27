@@ -1,5 +1,5 @@
 /* iniversal selector style */
-*{
+* {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
@@ -30,17 +30,19 @@ body{
 
 }
 
-.img_section{
+.img_section {
     border-radius: 25px;
-    background-image: url("images/sunnyBg.jpg");
+    background-image: url("images/rain\ bg.jpg");
     background-position: center;
     background-repeat: no-repeat;
     block-size: cover;
     position: relative;
-    transform: scale(1.03) perspective(200px);
+    transform: scale(1.05) perspective(200px);
+    padding: 0;
+    margin: 0;
 }
 
-.img_section::before{
+.img_section::before {
     content: "";
     position: absolute;
     width: 100%;
@@ -57,7 +59,7 @@ body{
 }
 
 .default_info img{
-    width: 80%;
+    width: 70%;
     object-fit: cover;
     margin: 0 auto;
 }
@@ -71,7 +73,7 @@ body{
     text-transform: capitalize;
 }
 
-.eather_temp {
+.weather_temp {
     font-size: 4rem;
     font-weight: 800;
 }
@@ -79,7 +81,7 @@ body{
 /* ====== content section ====== */
 
 .content_section {
-    padding: 1.2rem;
+    padding: 1.5rem;
 }
 
 .content_section form {
@@ -93,7 +95,7 @@ body{
     background: transparent;
     border: 1px solid #37474f;
     border-radius: 5px;
-    padding: 0.8rem 1rem;
+    padding: 0.7rem 1rem;
     font-family: inherit;
     color: #fff;
     font-size: 1rem;
@@ -115,5 +117,48 @@ body{
     color: #fff;
     cursor: pointer;
 }
+
+.day_info .content{
+    display: flex;
+    justify-content: space-between;
+    padding: 0.4rem 0;
+}
+
+.day_info .content .title{
+    font-weight: 600;
+}
+
+.list_content ul{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    list-style-type: none;
+    margin: 2rem 0rem;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.35);
+}
+
+.list_content ul li{
+    padding: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 1rem;
+    transition: all 0.3s ease-in;
+}
+
+.list_content ul li:hover{
+    transform:  scale(1.1);
+    background-color: #fff;
+    color: #232931;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.35);
+    cursor: pointer;
+}
+
+.list_content ul li img{
+    width: 50%;
+    object-fit: cover;
+
+}
+
 
 
