@@ -22,3 +22,18 @@ body{
     border-radius: 25px;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.35);
 }
+
+.wrapper{
+    display: grid;
+    grid-template-columns: 3fr 4fr;
+    grid-gap: 1rem;
+
+}
+
+.img_section{
+    border-radius: 25px;
+    background-image: url("images/sunnyBg.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    block-size: cover;
+}
