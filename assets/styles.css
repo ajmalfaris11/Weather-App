@@ -160,5 +160,10 @@ body{
 
 }
 
-
+@media screen and (max-width: 600px) {
+    .wrapper {
+      display: flex;
+      flex-direction: column;
+    }
+  }
 
