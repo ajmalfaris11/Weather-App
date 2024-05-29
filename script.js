@@ -9,6 +9,7 @@ const btnEl = document.querySelector(".btn_search");
 const inputEl = document.querySelector(".input_field");
 
 const iconsContainer = document.querySelector(".icons");
+const dayInfoEl = document.querySelector(".day_info");
 
 
 const days = [
@@ -50,6 +51,7 @@ btnEl.addEventListener("click", (e) => {
 
 async function findLocation(city){
     iconsContainer.innerHTML="";
+    dayInfoEl.innerHTML="";
     try {
         const API_URL = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${API}`;
         const data = await fetch(API_URL);
@@ -58,13 +60,45 @@ async function findLocation(city){
         console.log(result);
 
         if(result.cod !== "404"){
+
+            // display image content of live temperature
             const imgContent = displayImageContent(result);
             iconsContainer.insertAdjacentHTML("afterbegin", imgContent);
+
+            // display right side content
+            const dayInfoContent = rightSideContent(result);
+            dayInfoEl.insertAdjacentHTML("afterbegin", dayInfoContent);
+            
         }else{
+
+            // diaply when the city not avilable
              const message = ` <img src="assets/images/404error.png" alt="404Error">
              <h2 class="weather_temp">${result.cod}</h2>
             <h3 class="cloudtxt">${result.message}</h3> `;
             iconsContainer.insertAdjacentHTML("afterbegin", message);
+
+             const daynfoContent = `<div class="content">
+            <p class="title">Name</p>
+            <span class="value">City Not found</span>
+        </div>
+        <div class="content">
+            <p class="Temp">Temp</p>
+            <span class="value">Not found</span>
+        </div>
+        <div class="content">
+            <p class="Temp">HUMIDITY</p>
+            <span class="value">Not found</span>
+        </div>
+        <div class="content">
+            <p class="Temp">WIND SPEED</p>
+            <span class="value">Not found</span>
+        </div>`;
+
+        dayInfoEl.innerHTML = daynfoContent;
+
+        console.log("hello")
+
+
 
         }
         
@@ -79,5 +113,25 @@ function displayImageContent(data){
     <h3 class="cloudtxt">${data.weather[0].description}</h3> `;
 }
 
+// display the right side content
+function rightSideContent(result){
 
+    return `<div class="content">
+                <p class="title">Name</p>
+                <span class="value">${result.name}</span>
+            </div>
+            <div class="content">
+                <p class="Temp">Temp</p>
+                <span class="value">${Math.round(result.main.temp - 273.15)}&degC</span>
+            </div>
+            <div class="content">
+                <p class="Temp">HUMIDITY</p>
+                <span class="value">${result.main.humidity}%</span>
+            </div>
+            <div class="content">
+                <p class="Temp">WIND SPEED</p>
+                <span class="value">${result.wind.speed * 3.6}km/h</span>
+            </div>`;
+
+}
 
