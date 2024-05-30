@@ -6,7 +6,7 @@
 }
 
 body{
-    background-color: #37474f;
+    background-color: #120b33;
     height: 100vh;
     display: flex;
     align-items: center;
@@ -17,29 +17,32 @@ body{
 .container{
     max-width: 800px;
     width: 100%;
-    background-color: #232931;
+    background:linear-gradient(0deg, #5d47c9 20%, #2c2067);
     color: #fff;
     border-radius: 25px;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.35);
+    border-radius: 16px;
 }
 
 .wrapper{
     display: grid;
     grid-template-columns: 3fr 4fr;
-    grid-gap: 1rem;
-
+    grid-gap: 1rem;  
+    border-radius: 12px;
 }
 
 .img_section {
     border-radius: 25px;
-    background-image: url("images/rain\ bg.jpg");
-    background-position: center;
+    background-image: url("images/bgImg.jpg");
+    background-position: left bottom;
     background-repeat: no-repeat;
     block-size: cover;
     position: relative;
     transform: scale(1.05) perspective(200px);
     padding: 0;
     margin: 0;
+    font-family: "Concert One", sans-serif;
+    font-weight: bolder;
 }
 
 .img_section::before {
@@ -59,45 +62,61 @@ body{
 }
 
 .default_info img{
-    width: 70%;
+    width: 60%;
     object-fit: cover;
     margin: 0 auto;
 }
 
-.default_info h2{
-    font-size: 3rem ;
+.default_day {
+    font-size: 3.5rem ;
 }
 
 .default_info h3 {
-    font-style: 1.3rem;
+    font-style: 1.4rem;
     text-transform: capitalize;
 }
 
 .weather_temp {
     font-size: 4rem;
     font-weight: 800;
+    text-align: center;
 }
+
+
 
 /* ====== content section ====== */
 
 .content_section {
     padding: 1.5rem;
+    background:linear-gradient(0deg, #5d47c9 20%, #2c2067);
+    color: #ffffff;
+    border-radius: 16px;
+    position: relative;
+}
+
+.space_img{
+    position: absolute;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 0;
 }
 
 .content_section form {
     margin: 1.5rem 0;
     position: relative;
+    z-index: 1;
 }
 
 .content_section form input {
     width: 85%;
     outline: none;
     background: transparent;
-    border: 1px solid #37474f;
-    border-radius: 5px;
+    border: 1px solid white;
+    border-radius: 12px 0px 0px 12px;
     padding: 0.7rem 1rem;
     font-family: inherit;
-    color: #fff;
+    color: white;
     font-size: 1rem;
 
 }
@@ -106,26 +125,41 @@ body{
     position: absolute;
     top: 0;
     right: 0;
-    border-top-right-radius: 5px;
-    border-bottom-right-radius: 5px;
-    padding: 1rem 0.7rem;
+    border-radius: 0px 12px 12px 0px;
+    padding: 0.9rem 0.7rem;
     font-family: inherit;
     font-size: 0.8rem;
     outline: none;
     border: none;
-    background: #5c6bc0;
+    background: #8C52FF;
     color: #fff;
     cursor: pointer;
+}
+
+.day_info{
+    z-index: 1;
+
 }
 
 .day_info .content{
     display: flex;
     justify-content: space-between;
     padding: 0.4rem 0;
+    z-index: 1;
 }
 
 .day_info .content .title{
     font-weight: 600;
+    z-index: 1;
+}
+.value{
+    z-index: 1;
+}
+
+.list_content {
+    display: flex;
+    background-color: red;
+    position: relative;
 }
 
 .list_content ul{
@@ -135,6 +169,11 @@ body{
     list-style-type: none;
     margin: 2rem 0rem;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.35);
+    border-radius: 12px;
+    background:#3D2D8B;
+    padding-block: 5px;
+    z-index: 1;
+    position: absolute;
 }
 
 .list_content ul li{
@@ -144,14 +183,27 @@ body{
     align-items: center;
     border-radius: 1rem;
     transition: all 0.3s ease-in;
+    color: #ffffff;
+}
+
+.min_temp {
+    color: #f152ff;
+    font-size: small;
+}
+.max_temp{
+    color: #ffffff;
+    font-size: small;
+
 }
 
 .list_content ul li:hover{
     transform:  scale(1.1);
-    background-color: #fff;
-    color: #232931;
+    background-color: #8C52FF;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.35);
     cursor: pointer;
+    color: #ffffff;
+    background:linear-gradient(140deg, #5d47c9 20%, #b50fd374);
+
 }
 
 .list_content ul li img{
@@ -167,3 +219,6 @@ body{
     }
   }
 
+::placeholder{
+    color: white;
+}
