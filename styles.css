@@ -175,15 +175,11 @@ body{
     
 }
 
-.min_temp {
+.day_temp {
     color: #f152ff;
     font-size: small;
 }
-.max_temp{
-    color: #ffffff;
-    font-size: small;
 
-}
 
 .list_content ul li:hover{
     transform:  scale(1.2);
@@ -205,11 +201,6 @@ body{
     .wrapper {
       display: flex;
       flex-direction: column;
-    }
-
-    li .day_temp{
-        display: flex;
-        flex-direction: column;
     }
 
     .img_section {
