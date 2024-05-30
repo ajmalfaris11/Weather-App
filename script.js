@@ -169,8 +169,9 @@ async function displayForeCast(lat,lon){
     const joinDay = splitDay.join("");
 
     return `<li>
-    <img src="https://openweathermap.org/img/wn/${frContent.weather[0].icon}@2x.png" alt="weather"
     <span>${joinDay}</span>
-    <span class="day_temp">${Math.round(frContent.main.temp - 273.15)}&degC</span>
-</li>`
+    <img src="https://openweathermap.org/img/wn/${frContent.weather[0].icon}@2x.png" alt="weather">
+    <span class="day_temp"><span class="min_temp">${Math.round(frContent.main.temp - 273.15)}&degC</span>&nbsp; <span class="max_temp">${Math.round(frContent.main.temp - 273.15)}&degC</span></span>
+    </li>`
+
 }

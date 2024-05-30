@@ -37,6 +37,7 @@ body{
     background-position: left bottom;
     background-repeat: no-repeat;
     block-size: cover;
+    background-size: 100%;
     position: relative;
     transform: scale(1.05) perspective(200px);
     padding: 0;
@@ -50,7 +51,7 @@ body{
     position: absolute;
     width: 100%;
     height: 100%;
-    background: linear-gradient(135deg, #ffffff 10%, #0066ff 100%);
+    background: linear-gradient(135deg, #00b7ff 10%, #8a00ed 100%);
     opacity:0.5;
     z-index: -1;
     border-radius: 25px;
@@ -81,6 +82,7 @@ body{
     font-weight: 800;
     text-align: center;
 }
+
 
 
 
@@ -134,7 +136,7 @@ body{
     font-size: 0.8rem;
     outline: none;
     border: none;
-    background: #8C52FF;
+    background: linear-gradient(135deg, #b900f1 10%, #891ad9 100%);
     color: #fff;
     cursor: pointer;
 }
@@ -204,6 +206,38 @@ body{
       display: flex;
       flex-direction: column;
     }
+
+    li .day_temp{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .img_section {
+        border-radius: 25px;
+        background-image: url("images/space.png");
+        background-position: left bottom;
+        background-repeat: no-repeat;
+        block-size: cover;
+        background-size: 100%;
+        position: relative;
+        transform:none;
+        padding: 0;
+        margin: 0;
+        font-family: "Concert One", sans-serif;
+        font-weight: bolder;
+    }
+
+    .img_section::before {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background:none;
+        opacity:0.5;
+        z-index: -1;
+        border-radius: 25px;
+    }
+    
   }
 
 ::placeholder{
