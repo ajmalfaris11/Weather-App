@@ -33,7 +33,7 @@ body{
 
 .img_section {
     border-radius: 25px;
-    background-image: url("images/bgImg.jpg");
+    background-image: url("..images/bgImg.jpg");
     background-position: left bottom;
     background-repeat: no-repeat;
     block-size: cover;
