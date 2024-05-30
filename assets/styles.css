@@ -17,7 +17,7 @@ body{
 .container{
     max-width: 800px;
     width: 100%;
-    background:linear-gradient(0deg, #5d47c9 20%, #2c2067);
+    background:linear-gradient(0deg, #5d47c9 20%, #181238);
     color: #fff;
     border-radius: 25px;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.35);
@@ -88,10 +88,13 @@ body{
 
 .content_section {
     padding: 1.5rem;
-    background:linear-gradient(0deg, #5d47c9 20%, #2c2067);
+    background-image: url("images/space.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100%;
     color: #ffffff;
     border-radius: 16px;
-    position: relative;
 }
 
 .space_img{
@@ -136,30 +139,14 @@ body{
     cursor: pointer;
 }
 
-.day_info{
-    z-index: 1;
-
-}
-
 .day_info .content{
     display: flex;
     justify-content: space-between;
     padding: 0.4rem 0;
-    z-index: 1;
 }
 
 .day_info .content .title{
     font-weight: 600;
-    z-index: 1;
-}
-.value{
-    z-index: 1;
-}
-
-.list_content {
-    display: flex;
-    background-color: red;
-    position: relative;
 }
 
 .list_content ul{
@@ -172,8 +159,7 @@ body{
     border-radius: 12px;
     background:#3D2D8B;
     padding-block: 5px;
-    z-index: 1;
-    position: absolute;
+
 }
 
 .list_content ul li{
@@ -182,8 +168,9 @@ body{
     flex-direction: column;
     align-items: center;
     border-radius: 1rem;
-    transition: all 0.3s ease-in;
+    transition: all 0.3s ease-in ;
     color: #ffffff;
+    
 }
 
 .min_temp {
@@ -197,7 +184,7 @@ body{
 }
 
 .list_content ul li:hover{
-    transform:  scale(1.1);
+    transform:  scale(1.2);
     background-color: #8C52FF;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.35);
     cursor: pointer;
