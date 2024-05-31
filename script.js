@@ -12,6 +12,8 @@ const iconsContainer = document.querySelector(".icons");
 const dayInfoEl = document.querySelector(".day_info");
 const listContentEl = document.querySelector(".list_content ul");
 
+const imageSection = document.querySelector(".img_section");
+
 
 const days = [
     "Sunday",
@@ -116,22 +118,33 @@ function displayImageContent(data){
 
 // display the right side content
 function rightSideContent(result){
+    const rainyConditions = ["light rain", "moderate rain", "heavy rain", "drizzle", "showers",  ];
+    const thunderConditions = ["thunderstorm", "thunderstorms with rain" ]
 
+    if (rainyConditions.includes(result.weather[0].description)) {
+                imageSection.classList.add ("rain_bg");
+            } if(thunderConditions.includes(result.weather[0].description)) {
+                imageSection.classList.add("thunder_bg")
+            }else{
+                imageSection.classList.remove ("rain_bg");
+                imageSection.classList.remove("thunder_bg")
+            }
 
+    
     return `<div class="content">
                 <p class="title">Name</p>
                 <span class="value">${result.name}</span>
             </div>
             <div class="content">
-                <p class="Temp">Temp</p>
+                <p class="title">Temp</p>
                 <span class="value">${Math.round(result.main.temp - 273.15)}&degC</span>
             </div>
             <div class="content">
-                <p class="Temp">HUMIDITY</p>
+                <p class="title">HUMIDITY</p>
                 <span class="value">${result.main.humidity}%</span>
             </div>
             <div class="content">
-                <p class="Temp">WIND SPEED</p>
+                <p class="title">WIND SPEED</p>
                 <span class="value">${(result.wind.speed * 3.6).toFixed(2)}km/h</span>
             </div>`;
 
