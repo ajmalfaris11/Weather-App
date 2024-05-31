@@ -226,19 +226,16 @@ body{
     .wrapper {
       display: flex;
       flex-direction: column;
+      justify-content:space-between ;
+      align-items: center;
     }
 
     .img_section {
         border-radius: 25px;
         background-image: url("images/space.png");
-        background-position: left bottom;
         background-repeat: no-repeat;
         block-size: cover;
-        background-size: 100%;
-        position: relative;
-        transform:none;
-        padding: 0;
-        margin: 0;
+        object-fit: cover;
     }
 
     .img_section::before {
@@ -259,6 +256,9 @@ body{
     }
     .container{
         height: 100vh;
+    }
+    .content_section {
+        background-color: #230648ca;
     }
     
   }
