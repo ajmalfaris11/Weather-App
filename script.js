@@ -44,12 +44,13 @@ btnEl.addEventListener("click", (e) => {
         const city = inputEl.value;
         inputEl.value = "";
         findLocation(city);
+        console.log(city);
     }
     else{
         alert("Please Give City or Country Name");
     }
 })
-
+findLocation("United Kingdom");
 async function findLocation(city){
     iconsContainer.innerHTML="";
     dayInfoEl.innerHTML="";
@@ -116,6 +117,7 @@ function displayImageContent(data){
 // display the right side content
 function rightSideContent(result){
 
+
     return `<div class="content">
                 <p class="title">Name</p>
                 <span class="value">${result.name}</span>
@@ -168,9 +170,11 @@ async function displayForeCast(lat,lon){
     const splitDay = dayName.split("", 3);
     const joinDay = splitDay.join("");
 
-    return `<li>
-    <span>${joinDay}</span>
-    <img src="https://openweathermap.org/img/wn/${frContent.weather[0].icon}@2x.png" alt="weather"
-    <span class="day_temp">${Math.round(frContent.main.temp - 273.15)}&degC</span>
-</li>`
+    return `
+    <li>
+        <span>${joinDay}</span>
+        <img src="https://openweathermap.org/img/wn/${frContent.weather[0].icon}@2x.png" alt="weather"
+        <span class="day_temp">${Math.round(frContent.main.temp - 273.15)}&degC</span>
+    </li>
+    `
 }

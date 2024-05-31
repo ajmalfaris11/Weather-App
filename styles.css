@@ -126,6 +126,10 @@ body{
 
 }
 
+.input_field:focus{
+    border-color: #f152ff;
+}
+
 .content_section form button{
     position: absolute;
     top: 0;
