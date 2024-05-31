@@ -257,6 +257,9 @@ body{
     .default_info img {
         width: 30%;
     }
+    .container{
+        height: 100vh;
+    }
     
   }
 
