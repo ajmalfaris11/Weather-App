@@ -254,6 +254,9 @@ body{
     .content_section {
         background-image: none;
     }
+    .default_info img {
+        width: 30%;
+    }
     
   }
 
