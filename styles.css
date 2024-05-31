@@ -227,7 +227,8 @@ body{
       display: flex;
       flex-direction: column;
       justify-content:space-between ;
-      align-items: center;
+      height: 100%;
+
     }
 
     .img_section {
@@ -236,6 +237,17 @@ body{
         background-repeat: no-repeat;
         block-size: cover;
         object-fit: cover;
+    }
+
+    .img_section {
+        border-radius: 25px;
+        background-image: url("images/space.png");
+        background-repeat: no-repeat;
+        background-size: cover; /* Ensures the image covers the entire element */
+        background-position: center; /* Centers the image within the element */
+        width: 100%; /* Takes full width of the parent container */
+        height: auto; /* Adjusts the height automatically to maintain aspect ratio */
+        object-fit: cover; /* Ensures the content of the element covers its box */
     }
 
     .img_section::before {
@@ -258,7 +270,11 @@ body{
         height: 100vh;
     }
     .content_section {
-        background-color: #230648ca;
+        margin-top: 30px;
+        background-color: #24023d5c;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
     }
     
   }
