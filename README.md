@@ -11,34 +11,6 @@ Weather App is a simple, user-friendly application that provides current weather
 - **Responsive Design**: Optimized for both mobile and desktop views.
 - **Interactive UI**: Easy-to-use interface with dynamic updates and smooth transitions.
 
-## Installation
-
-To run the Weather App locally, follow these steps:
-
-1. **Clone the Repository**
-   ```bash
-   git clone https://github.com/yourusername/weather-app.git
-   cd weather-app
-   ```
-
-2. **Install Dependencies**
-   ```bash
-   npm install
-   ```
-
-3. **Get an API Key**
-   - Sign up for a free account at [OpenWeatherMap](https://openweathermap.org/) to get an API key.
-
-4. **Configure the API Key**
-   - Create a `.env` file in the root directory of your project and add your API key:
-     ```
-     REACT_APP_WEATHER_API_KEY=your_api_key_here
-     ```
-
-5. **Start the Application**
-   ```bash
-   npm start
-   ```
 
 ## Usage
 
